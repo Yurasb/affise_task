@@ -14,14 +14,13 @@ def call_offers(**kwargs):
             method='GET',
             headers=kwargs['headers']
         )
-        return resp
     else:
         resp = request(
             url='{}/offers'.format(BASE_URL),
             method=kwargs['method'],
             headers=kwargs['headers']
         )
-        return resp
+    return resp
 
 
 def call_pixel(**kwargs):
@@ -32,11 +31,10 @@ def call_pixel(**kwargs):
             headers=kwargs['headers'],
             data=DATA
         )
-        return resp
     else:
         resp = request(
             url='{}/pixel'.format(BASE_URL),
             method=kwargs['method'],
             headers=kwargs['headers']
         )
-        return resp
+    return resp
